@@ -65,7 +65,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden md:flex items-center gap-10">
-            {['Accueil', 'Services', 'Le Cabinet', 'À Propos'].map((item) => (
+            {['Accueil', 'Services', 'Le Cabinet', 'Contact'].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className="text-[10px] font-bold uppercase tracking-widest text-medical-ink/60 hover:text-medical-sage transition-colors">{item}</a>
             ))}
             <Button variant="primary" className="px-6 py-2.5 text-[10px] uppercase tracking-widest">Rendez-vous</Button>
@@ -84,7 +84,7 @@ const Navbar = () => {
           className="absolute top-20 left-4 right-4 p-8 bg-white rounded-[32px] shadow-2xl md:hidden z-50 border border-medical-border"
         >
           <div className="flex flex-col gap-6">
-            {['Accueil', 'Services', 'Le Cabinet', 'À Propos', 'Contact'].map((item, i) => (
+            {['Accueil', 'Services', 'Le Cabinet', 'Contact'].map((item, i) => (
               <motion.a 
                 key={item} 
                 href={`#${item.toLowerCase()}`} 
@@ -347,7 +347,7 @@ const Services = () => {
 };
 
 const Cabinet = () => (
-  <section id="le cabinet" className="section-padding bg-medical-bg relative overflow-hidden">
+  <section id="le-cabinet" className="section-padding bg-medical-bg relative overflow-hidden">
     <div className="absolute bottom-0 left-0 w-96 h-96 bg-medical-sage/5 rounded-full blur-3xl -ml-48 -mb-48" />
     <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24 items-center">
@@ -623,8 +623,12 @@ const Footer = () => (
           <div className="md:col-span-3">
             <h4 className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] mb-6 md:mb-10 text-white/20">Navigation</h4>
             <ul className="space-y-4 md:space-y-6 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-white/60">
-              {['Accueil', 'Services', 'Le Cabinet', 'À Propos'].map(i => (
-                <li key={i}><a href="#" className="hover:text-medical-sage transition-colors">{i}</a></li>
+              {['Accueil', 'Services', 'Le Cabinet', 'Contact'].map(i => (
+                <li key={i}>
+  <a href={`#${i.toLowerCase()}`} className="hover:text-medical-sage transition-colors">
+    {i}
+  </a>
+</li>
               ))}
             </ul>
           </div>
